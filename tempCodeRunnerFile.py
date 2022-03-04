@@ -1,0 +1,1 @@
+print("X_train.shape: ", x_train.shape)
