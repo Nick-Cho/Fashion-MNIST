@@ -41,3 +41,14 @@ model.compile(optimizer="adam",
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
 r = model.fit(x_train, y_train, validation_data=(x_test, y_test), epochs=15)
+
+# Plotting loss and accuracy
+plt.plot(r.history['loss'], label='loss')
+plt.plot(r.history['val_loss'], label='val_loss')
+plt.legend()
+plt.show()
+
+plt.plot(r.history['accuracy'], label='acc')
+plt.plot(r.history['val_accuracy'], label='val_acc')
+plt.legend()
+plt.show()
